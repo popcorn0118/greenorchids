@@ -9,3 +9,143 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: astra-child
 Template: astra
 */
+.logo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: block;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(255, 241, 0, 0.7);
+  border-radius: 100%;
+}
+
+@media (max-width: 1024px) {
+  .logo::after {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.logo img {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+}
+
+@media (max-width: 1024px) {
+  .logo img {
+    width: 50%;
+  }
+}
+
+.home .site-logo-img {
+  display: none;
+}
+
+.woocommerce .products .product {
+  border: 1px solid #e5e5e5;
+  padding: 30px !important;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.woocommerce .products .product:hover {
+  -webkit-transform: translateY(-0.5em);
+          transform: translateY(-0.5em);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-box-shadow: 0 20px 20px -10px #00000033 !important;
+          box-shadow: 0 20px 20px -10px #00000033 !important;
+}
+
+.woocommerce .products .product .button {
+  width: 100%;
+  text-align: center;
+  background: transparent !important;
+  color: #5C9735;
+  border: 1px solid #5C9735;
+}
+
+.woocommerce .products .product .button:hover {
+  background: #5C9735 !important;
+  color: #fff;
+}
+
+.footer-menu .menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media (max-width: 1024px) {
+  .footer-menu .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer-menu .menu li {
+  position: relative;
+}
+
+.footer-menu .menu li a {
+  color: #fff;
+}
+
+.footer-menu .menu li a:hover {
+  color: #5C9735;
+}
+
+@media (max-width: 1024px) {
+  .footer-menu .menu li:not(:last-of-type)::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #5C9735;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0 0 3px 0;
+  }
+  .footer-menu .menu li a {
+    padding: 0 10px;
+    font-size: 16px;
+  }
+}
+
+.ast-footer-copyright a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ast-footer-copyright a:hover {
+  color: #5C9735;
+}

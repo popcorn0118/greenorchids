@@ -1,0 +1,130 @@
+/**
+Theme Name: astra-child
+Author: Brainstorm Force
+Author URI: http://wpastra.com/about/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra-child
+Template: astra
+*/
+$primary: #5C9735;
+$sec: #FFF100;
+
+.logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        display: block;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        backdrop-filter: blur(10px);
+        background-color: rgba($sec, 0.7);
+        border-radius: 100%;
+        @media (max-width: 1024px) {
+            width: 120px;
+            height: 120px;
+        }
+    }
+    img {
+        position: relative;
+        z-index: 1;
+        width: 80%;
+        @media (max-width: 1024px) {
+            width: 50%;
+        }
+    }
+}
+//首頁
+.home {
+    .site-logo-img {
+        display: none;
+    }
+}
+//woocommerce 
+.woocommerce {
+    .products  {
+        .product {
+            border: 1px solid #e5e5e5;
+            padding: 30px !important;
+            transition: 0.4s;
+            &:hover {
+                transform: translateY(-0.5em);
+                transition: 0.4s;
+                box-shadow: 0 20px 20px -10px #00000033 !important;
+            }
+            .button {
+                width: 100%;
+                text-align: center;
+                background: transparent !important;
+                color: $primary;
+                border: 1px solid $primary;
+                &:hover {
+                    background: $primary !important;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+//footer
+.footer-menu {
+    .menu {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        // display: flex;
+        // flex-wrap: wrap;
+        @media (max-width: 1024px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        li {
+            // width: 50%;
+            position: relative;
+            a {
+                color: #fff;
+                &:hover {
+                    color: $primary;
+                }
+            }
+            @media (max-width: 1024px) {
+                &:not(:last-of-type )::after {
+                    content: '';
+                    width: 5px;
+                    height: 5px;
+                    background-color: $primary;
+                    border-radius: 5px;
+                    display: inline-block;
+                    margin: 0 0 3px 0;
+                }
+                a {
+                    padding: 0 10px;
+                    font-size: 16px;
+                }
+                &:last-of-type {
+
+                }
+            }
+        }
+    }
+}
+.ast-footer-copyright {
+    a {
+        color: rgba(#fff, 0.5);
+        &:hover {
+            color: $primary;
+        }
+    }
+}
