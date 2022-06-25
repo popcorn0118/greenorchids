@@ -9,6 +9,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: astra-child
 Template: astra
 */
+p {
+  font-size: 16px !important;
+}
+
 .logo {
   position: relative;
   display: -webkit-box;
@@ -61,6 +65,14 @@ Template: astra
   display: none;
 }
 
+.home header #ast-desktop-header {
+  border-top: 0px;
+}
+
+header #ast-desktop-header {
+  border-top: 5px solid #5C9735;
+}
+
 .woocommerce .products .product {
   border: 1px solid #e5e5e5;
   padding: 30px !important;
@@ -90,32 +102,76 @@ Template: astra
   color: #fff;
 }
 
+.woocommerce .woocommerce-input-wrapper {
+  display: block;
+}
+
+.woocommerce form .form-row label {
+  display: inline-block;
+}
+
+.woocommerce .onsale {
+  background-color: #5C9735 !important;
+  color: #fff !important;
+  width: 52px;
+  height: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px !important;
+  top: -10px !important;
+  right: -10px !important;
+}
+
+.download {
+  overflow: hidden;
+}
+
 .footer-menu .menu {
   padding: 0;
   margin: 0;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 70%;
 }
 
 @media (max-width: 1024px) {
   .footer-menu .menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    width: 100%;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
 .footer-menu .menu li {
+  width: 50%;
   position: relative;
+}
+
+@media (max-width: 1024px) {
+  .footer-menu .menu li {
+    width: auto;
+  }
 }
 
 .footer-menu .menu li a {
