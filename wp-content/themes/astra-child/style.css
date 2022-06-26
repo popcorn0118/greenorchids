@@ -142,6 +142,10 @@ header #ast-desktop-header {
   right: -10px !important;
 }
 
+.woocommerce-checkout .ast-article-single {
+  padding: 3em !important;
+}
+
 .download {
   overflow: hidden;
 }
