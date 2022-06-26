@@ -61,6 +61,19 @@ p {
   }
 }
 
+.breadcrumbs {
+  text-align: center;
+}
+
+.breadcrumbs span[typeof="ListItem"]:last-of-type {
+  font-size: 2em;
+  display: block;
+}
+
+.breadcrumbs .symbol:last-of-type {
+  display: none;
+}
+
 .home .site-logo-img {
   display: none;
 }

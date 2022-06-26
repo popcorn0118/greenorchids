@@ -45,6 +45,20 @@ p {
         }
     }
 }
+.breadcrumbs {
+    text-align: center;
+    span[typeof="ListItem"] {
+        &:last-of-type {
+            font-size: 2em;
+            display: block;
+        }
+    }
+    .symbol {
+        &:last-of-type {
+            display: none;
+        }
+    }
+}
 //首頁
 .home {
     .site-logo-img {
