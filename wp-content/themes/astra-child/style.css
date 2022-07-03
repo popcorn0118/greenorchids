@@ -222,3 +222,34 @@ header #ast-desktop-header {
 .ast-footer-copyright a:hover {
   color: #5C9735;
 }
+
+.contact-form .wpforms-field-label {
+  font-size: 14px;
+}
+
+.contact-form .wpforms-field-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact-form .wpforms-field.w50 {
+  width: 49%;
+}
+
+.contact-form .wpforms-field.w100 {
+  width: 100%;
+}
+
+.contact-form .wpforms-submit-container {
+  text-align: center;
+}
+
+.contact-form .wpforms-submit-container .wpforms-submit {
+  padding: 20px 40px;
+}
