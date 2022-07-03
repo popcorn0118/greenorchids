@@ -125,7 +125,7 @@ function custom_order_meta_invoice($order){
 		echo '<p><strong>公司抬頭:</strong> ' . get_post_meta( $order->id, 'company_name', true );
 		echo '<br><strong>統一編號:</strong> ' . get_post_meta( $order->id, 'company_id', true ).'</p>';
 	} else {
-		echo '<h3><strong>發票:</strong> 捐贈發票至XXX</h3>';
+		echo '<h3><strong>發票:</strong> 開立二聯式發票</h3>';
 	}
 }
 add_filter("woocommerce_after_checkout_form", "invoice_container");
